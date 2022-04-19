@@ -746,6 +746,7 @@ module.exports = function () {
 
     function safe_emit(label, msg) {
       // add message to mailbox
+      console.log("jiff-client-websockets.js line 749" + typeof this.mailbox + ", " + this.mailbos);
       var mailbox_pointer = this.mailbox.add({ label: label, msg: msg });
       if (this.readyState === 1) {
         var self = this;
